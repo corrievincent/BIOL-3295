@@ -11,9 +11,10 @@ require(viridis)
 # The number of time steps to run the simulation
 total.time = 500
 # Larval mortality rate
-l0 = 1
+l0 = .1
 # Adult mortality rate
-l1 = 1
+l1 = l0*0.5
+
 Popn.Size=1000
 
 
@@ -60,6 +61,7 @@ Development = function(L){
 
 Lvec = seq(.55,2,.01)
 plot(Lvec,Development(Lvec),typ="l", lwd=3, ylim = c(0,30), xlim = c(0.55,2), xlab = "Thorax length, L (mm)", ylab = "Development time, d(L)", main = "Fox et al. 2001: Evolutionary ecology, Fig. 8.2")
+plot(Lvec,exp(-l0*Development(Lvec)),typ="l", lty=2, lwd=3, xlim=c(0.55,2), ylim = c(0,.6), xlab = "Thorax length, L (mm)", ylab = "Survival from egg to adult", main = "Fox et al. 2001: Evolutionary ecology, Fig. 8.2")
 
 Develop.time = Development(Strategy$L)
 Strategy = cbind(Strategy,Develop.time)
@@ -80,15 +82,20 @@ Popn = data.frame(cbind(strategy=strategy,age=age,L=L,develop.time))
 
 # The fecundity function
 Fecundity = function(a,L){
-  m1 = 1
-  m2 = 1
-  m3 = 1
-  m4 = 1
-  m5 = 1
+  m1 = .45
+  # m2: x-intercept
+  m2 = 3
+  m3 = .15
+  m5 = .8
+  m4 = 250
   m0 = m4*L^m5
-  m = m0*(1-exp(-m1*(a-m2))*exp(-m3*a))
+  m = m0*(1-exp(-m1*(a-m2)))*exp(-m3*a)
   return(m)
 }
+
+avec = seq(0,20,.1)
+plot(avec,Fecundity(avec,0.6), typ="l", lwd=3,ylim = c(0,120), xlab = "Age (days since eclosion)", ylab = "Female eggs, m(x)", main = "Fox et al. 2001: Evolutionary ecology, Fig. 8.2")
+lines(avec, Fecundity(avec,1.6), lwd=3, lty=2)
 
 dscore = age
 bscore = age
@@ -106,7 +113,7 @@ dscore[Popn$age<Popn$develop.time] = l0
 cum.dscore = cumsum(dscore)
 # r1: choose a random number to decide an individual of which strategy
 # will die
-r1 = runif(1, 0, length(Popn[,1]))
+r1 = runif(1, 0, cum.dscore[length(Popn[,1])])
 # strategy.d: the strategy of the individual that will die
 ind.d = min(which(cum.dscore>r1))
 Popn = Popn[-ind.d,]
@@ -137,7 +144,7 @@ Number[t+1,] = c(t, strategies.count)
 #Fix the color palette so that we can make a legend that will be
 # correct for a variable number of strategies
 Colours = viridis(Number.Strategies)
-plot(Number[,1], Number[,2], typ="l", col = Colours[1], ylim = c(min(Number[,2:(Number.Strategies+1)]),max(Number[,2:(Number.Strategies+1)])), xlab = "time", ylab = "population size", main = "Evolution of maturation rate")
+plot(Number[,1], Number[,2], typ="l", col = Colours[1], ylim = c(min(Number[,2:(Number.Strategies+1)]),max(Number[,2:(Number.Strategies+1)])), xlab = "time", ylab = "population size", main = "Evolution of body size at maturity")
 for(i in seq(2,Number.Strategies)){
 lines(Number[,1], Number[,i+1], typ="l", col = Colours[i])
 }
