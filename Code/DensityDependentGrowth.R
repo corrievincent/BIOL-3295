@@ -58,7 +58,7 @@ AltLogisticGrowth = function(Nstart,lambda,K,tstart,tend){
 ########
 # Ricker
 ########
-Ricker = function(Nstart,lambda,K,tstart,tend){
+Ricker = function(Nstart,r,K,tstart,tend){
   Result = c(tstart,Nstart)
   N = Nstart
   for(t in seq(tstart+1,tend,1)){
@@ -86,7 +86,7 @@ BevertonHolt = function(Nstart,lambda,K,tstart,tend){
 # VALUES
 ########
 
-## Continuous time logistic growth
+####### Continuous time logistic growth
 # Parameters
 r = 1
 K = 100
@@ -99,6 +99,76 @@ times = seq(0,50,.1)
 out = ode(N0,times,LogisticGrowth,p=c(r=r,K=K), method = "ode45")
 
 # Make the graph
-plot(out[,1], out[,2], typ="l", xlab = "time, t", ylab = "population size, N(t)")
+par(mfrow=c(2,1), mar=c(4,4,2,2))
+# Panel 1
+plot(out[,1], out[,2], typ="l", xlab = "time, t", ylab = "population size, N(t)", main = "CT logistic growth with r=1")
 
+# Panel 2
+r = -1
+N0 = 80
+# Performing the numerical integration
+out = ode(N0,times,LogisticGrowth,p=c(r=r,K=K), method = "ode45")
+plot(out[,1], out[,2], typ="l", xlab = "time, t", ylab = "population size, N(t)", main = "CT logistic growth with r=-1")
 
+par(mfrow = c(2,2), mar = c(4,4,2,2))
+# Discrete time logistic growth (May)
+# Consider 4 different parameter values
+May = MayLogisticGrowth(.1, 2.7, 0.6, 0, 30)
+plot(May$time, May$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "May logistic, lambda = 2.7")
+# Panel 2
+May = MayLogisticGrowth(.1, 3.4, 0.6, 0, 30)
+plot(May$time, May$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "May logistic, lambda = 3.4")
+# Panel 3
+May = MayLogisticGrowth(.1, 3.8, 0.6, 0, 30)
+plot(May$time, May$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "May logistic, lambda = 3.8")
+# Panel 4, note that May's logistic growth is a poor model because it predicts negative population sizes
+May = MayLogisticGrowth(.1, 8, 0.6, 0, 30)
+plot(May$time, May$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "May logistic, lambda = 4.1")
+
+######## Ricker population growth
+# Consider 4 different parameter values
+Ricker.output = Ricker(1, 1.2, 20, 0, 30)
+plot(Ricker.output$time, Ricker.output$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "Ricker, r = 1.2")
+
+Ricker.output = Ricker(1, 2.2, 20, 0, 30)
+plot(Ricker.output$time, Ricker.output$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "Ricker, r = 2.2")
+
+Ricker.output = Ricker(1, 4.5, 20, 0, 30)
+plot(Ricker.output$time, Ricker.output$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "Ricker, r = 4.5")
+
+Ricker.output = Ricker(1, -0.5, 20, 0, 30)
+plot(Ricker.output$time, Ricker.output$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "Ricker, r = -0.5")
+
+######## Beverton-Holt population growth
+# Consider 4 different parameter values
+BH.output = BevertonHolt(1, 1.3, 20, 0, 30)
+plot(BH.output$time, BH.output$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "BH, lambda = 1.3, K=20")
+
+BH.output = BevertonHolt(1, 1.5, 20, 0, 30)
+plot(BH.output$time, BH.output$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "BH, lambda = 1.5, K=20")
+
+BH.output = BevertonHolt(1, 1.3, 10, 0, 30)
+plot(BH.output$time, BH.output$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "BH, lambda = 1.3, K=10", ylim = c(0,20))
+
+BH.output = BevertonHolt(1, 0.9, 20, 0, 30)
+plot(BH.output$time, BH.output$Popn.Size, typ="l", xlab = "time, t", ylab = "Population Size, N_t", main = "BH, lambda = 0.9, K=20", ylim=c(0,20))
+
+###### Cobwebbing diagrams
+par(mfrow = c(1,1))
+N = seq(0,100,.2)
+lambda = 1.2
+K=50
+plot(N, lambda*N*(1-N/K), main = "May's logistic, lambda = 1.2, K =50", xlab = "N_t", ylab = "N_{t+1}", typ="l", ylim = c(0,15), xlim = c(0,20))
+lines(N,N, lty=2)
+
+lambda = 2.5
+plot(N, lambda*N*(1-N/K), main = "May's logistic, lambda = 2.5, K =50", xlab = "N_t", ylab = "N_{t+1}", typ="l", ylim = c(0,40), xlim = c(0,50))
+lines(N,N, lty=2)
+
+lambda = 4.5
+plot(N, lambda*N*(1-N/K), main = "May's logistic, lambda = 4.5, K =50", xlab = "N_t", ylab = "N_{t+1}", typ="l", ylim = c(0,60), xlim = c(0,70))
+lines(N,N, lty=2)
+
+lambda = 4.5
+plot(N, lambda*N/(1+N*(lambda - 1)/K), main = "Beverton-Holt, lambda = 4.5, K =50", xlab = "N_t", ylab = "N_{t+1}", typ="l", ylim = c(0,60), xlim = c(0,80))
+lines(N,N, lty=2)

@@ -1,7 +1,5 @@
 # Announcements
 
-- Lab 3 will be in the computer labs.
-- Assignment 1 is posted. It is due Tues October 1 at 12pm.
-- Reading for this week is Vandermeer and Goldberg (2013) p9-17 on 'Density dependence' and p28-29 on 'Density dependence in discrete time models'.
-- If you are having software problems please see me or a TA. There is a troubleshooting file added under 'Handouts'
-- Please look at the schedule and do your duck counts
+- The midterm is posted! It is due Nov 1. Happy mid semester break.
+- Count the ducks and submit your pull request.
+- For getting help with R/Rstudio, I find (coarse language not withstanding), The pirates guide to R pretty good: https://bookdown.org/ndphillips/YaRrr/
