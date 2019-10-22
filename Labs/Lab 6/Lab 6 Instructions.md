@@ -2,9 +2,9 @@
 (This file is best viewed on the Github website - and other .md files too)
 
 This report is due Wednesday Oct 30 at 2pm
-<img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Drosophila_melanogaster_Proboscis.jpg" width="10%">
+<img src="https://commons.wikimedia.org/wiki/File:Drosophila_melanogaster_Proboscis.jpg" width="10%">
 
-Photo credit: Sanjay Acharya CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0)>
+Photo credit: Sanjay Acharya CC BY-SA 4.0 <https://creativecommons.org/licenses/by-sa/4.0>
 
 
 ```
