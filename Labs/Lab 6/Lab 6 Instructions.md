@@ -7,7 +7,7 @@ This report is due Wednesday Oct 30 at 2pm
 
 Attribution: Madboy74 [CC0]
 
-This lab is based on the Section _The evolution of age and size at maturity in Drosophilia_ in Fox et al. 2001 Evolutionary Ecology, which is available as an ebook through the MUN library https://ebookcentral.proquest.com/lib/mun/detail.action?docID=430289.
+This lab is based on the Section _The evolution of age and size at maturity in Drosophilia_ beginning on p107 in Fox et al. 2001 Evolutionary Ecology, which is available as an ebook through the MUN library https://ebookcentral.proquest.com/lib/mun/detail.action?docID=430289.
 
 ```
 > head(aq.trans)
