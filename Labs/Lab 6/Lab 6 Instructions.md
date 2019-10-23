@@ -7,14 +7,14 @@ This report is due Wednesday Oct 30 at 2pm
 
 Attribution: Madboy74 [CC0]
 
-This lab is based on the section _The evolution of age and size at maturity in Drosophilia_ beginning on p107 in Fox et al. 2001 Evolutionary Ecology, which is available as an ebook through the MUN library https://ebookcentral.proquest.com/lib/mun/detail.action?docID=430289.
+This lab is based on the section _The evolution of age and size at maturity in Drosophila_ beginning on p107 in Fox et al. 2001 Evolutionary Ecology, which is available as an ebook through the MUN library https://ebookcentral.proquest.com/lib/mun/detail.action?docID=430289.
 
-The relevant evolutionary biology is that _Drosophilia_ that mature at a larger size:
+The relevant evolutionary biology is that _Drosophila_ that mature at a larger size:
 1. Will produce more eggs, but
 1. Will take longer to develop to adulthood (i.e. reproductive age), and
 1. Since development time is longer, there is a higher chance of dying before reaching maturity.
 
-All of these points are illustrated in Figure 8.2 on p108 of Fox et al. 2001. As such, and as shown in the lower panel of Figure 8.2 on p108 of Fox et al., evolution selects for _Drosophilia_ with intermediate sizes at maturity. Specifically, size is measured as the thorax length, and Fox et al. notes that observed thorax sizes are between 0.7 and 1.5 mm in North America.
+All of these points are illustrated in Figure 8.2 on p108 of Fox et al. 2001. As such, and as shown in the lower panel of Figure 8.2 on p108 of Fox et al., evolution selects for _Drosophila_ with intermediate sizes at maturity. Specifically, size is measured as the thorax length, and Fox et al. notes that observed thorax sizes are between 0.7 and 1.5 mm in North America.
 
 The script `Body_Size_Evolution.R` considers the information provided on p107-108 of Fox et al. 2001 and simulates the evolutionary dynamics to see which genotypes prevail and which go extinct. If you open this file in `RStudio` and click `Source` you will see that four graphs are produced.
 
@@ -71,12 +71,12 @@ Pseudocode is a step-by-step description of how an algorithm works. For example,
 
 ```
 1. Assign the parameters numerical values.
-1. Define a vector listing the values of time to be considered.
-1. Preallocate a vector that will record the population size for each point in time.
-1. Assign a value for the initial population size.
-1. Define a loop, such that, the different values of time are sequentially considered, and so that the current size of the population is used to calculate the size of the population at the next time step.
-1. Within the loop, record the current time and the current population size.
-1. At the end of each loop iteration, advance time to its next value, and set the current value of the population size equal to the value that had been calculated for the population size at the next time step.
+2. Define a vector listing the values of time to be considered.
+3. Preallocate a vector that will record the population size for each point in time.
+4. Assign a value for the initial population size.
+5. Define a loop, such that, the different values of time are sequentially considered, and so that the current size of the population is used to calculate the size of the population at the next time step.
+6. Within the loop, record the current time and the current population size.
+7. At the end of each loop iteration, advance time to its next value, and set the current value of the population size equal to the value that had been calculated for the population size at the next time step.
 ```
 A valuable aspect of reporting code in this way is skipping over non-essential details, such as syntax and exact numerical values, and to focus instead on the concepts of what the code is doing.
 
