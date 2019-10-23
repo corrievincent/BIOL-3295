@@ -18,7 +18,7 @@ All of these points are illustrated in Figure 8.2 on p108 of Fox et al. 2001. As
 
 The script `Body_Size_Evolution.R` considers the information provided on p107-108 of Fox et al. 2001 and simulates the evolutionary dynamics to see which genotypes prevail and which go extinct. If you open this file in `RStudio` and click `Source` you will see that four graphs are produced.
 
-I was unable to easily find the parameters corresponding to Figure 8.2 in Fox et al. and so I guessed the parameter values until I was able to get graphs that matched Fox et al.: the first three graphs are checking the correspondence between the parameters that we are using for the simulations, and Figure 8.2 from Fox et al. This simulation procedure does have limitations, but despite the guess work, these parameters seem to be estimated quite well.
+I was unable to easily find the parameters corresponding to Figure 8.2 in Fox et al. and so I guessed the parameter values until I was able to reproduce the graphs from Fox et al.: the first three graphs are checking the correspondence between the parameters that we are using for the simulations, and Figure 8.2 from Fox et al. This simulation procedure does have limitations, but despite the guess work, these parameters seem to be estimated quite well.
 
 The fourth graph shows the evolutionary dynamics of the genotypes over time. The default code values have:
 
