@@ -13,7 +13,7 @@ require(viridis)
 
 # The number of time steps to run the simulation
 # You can change 100 to a different number if you would like
-total.time = 1000
+total.time = 100
 
 # Larval mortality rate
 # ---------------------
