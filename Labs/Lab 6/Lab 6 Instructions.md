@@ -26,7 +26,7 @@ The fourth graph shows the evolutionary dynamics of the genotypes over time. The
 total.time = 100
 ```
 
-which corresponds to `100*dt` days and `dt=0.1`, so 10 days. For a simulation this short, we can see the changes resulting from one individual dying or reproducing, but a simulation this short does not give us an idea of the long term population dynamics, and so you might wish to increase `total.time` in the code, while keeping in mind that the larger `total.time` is, the longer your simulation will take to finish.
+which corresponds to `100*dt` days, and `dt=0.1`, so 10 days. For a simulation this short, we can see the changes resulting from one individual dying or reproducing, but a simulation this short does not give us an idea of the long term population dynamics, and so you might wish to increase `total.time` in the code, while keeping in mind that the larger `total.time` is, the longer your simulation will take to finish.
 
 Next, let's consider
 
@@ -46,10 +46,10 @@ So far, we know that if there are 3 genotypes corresponding to maturity at 1 mm,
 You are to devise a set of numerical experiments to better understand the evolutionary dynamics of body size at maturation by changing `genotypes.list`, running simulations, and recording the outcome.
 
 ### You are to hand-in
-- A table that lists: the genotypes you considered; and the outcome of each simulation, for a series of numerical experiments.
-- A description of the logic you used in deciding what values of `genotype.list` to use for your numerical experiments.
+- A table that lists: the genotypes you considered, and the outcome of each simulation, for a series of numerical experiments.
+- A description of the logic you used in deciding what values of `genotype.list` to use for your set of numerical experiments.
 - Answers to the following questions:
-  - Do you expect there is a single best body size at maturity, that if present in the population will always go to fixation? What is this value? Explain how your table of results led you to this conclusion.
+  - Do you expect there is a single best body size at maturity, that if present in the population will always go to fixation? What is this value? Explain how your table of results supports this conclusion.
   - Does the outcome of the evolutionary dynamics depend on the size of mutations? Describe the simulations that you did to test this.
   
 Specifically, if mutations have small effect, then competing genotypes will have similar values, and you might consider a simulation like this:
@@ -58,7 +58,7 @@ Specifically, if mutations have small effect, then competing genotypes will have
 genotypes.list = c(0.95,1,1.05)
 ```
 
-but if mutations have big effect, then the competing genotypes will be more different, and you might consider a simulation like this:
+but if mutations have a big effect, then the competing genotypes will be more different, and you might consider a simulation like this:
 
 ```
 genotypes.list = c(0.5,1,1.5)
