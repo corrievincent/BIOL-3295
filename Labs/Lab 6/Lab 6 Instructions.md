@@ -1,4 +1,4 @@
-# Lab 6: Simulation of evolution of body size at maturation for _Drosophila_
+# Lab 6: Simulating the evolution of body size and age at maturation for _Drosophila_
 (This file is best viewed on the Github website - and other .md files too)
 
 This report is due Wednesday Oct 30 at 2pm
