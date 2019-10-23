@@ -1,4 +1,4 @@
-# EVOLUTION OF AGE AND SIZE AT MATURITY IN DROSOPHILIA
+# EVOLUTION OF AGE AND SIZE AT MATURITY IN DROSOPHILA
 #__________________________
 
 # Based on the section beginning on p107 of Fox et al. Evolutionary Ecology.
@@ -34,7 +34,7 @@ l1 = l0*0.5
 #----------------
 # This simulation considers evolution in a population that,
 # for the most part, doesn't change in size. The population size should be relatively
-# large or the evolutionary outcome with be affected by genetic drift.
+# large or the evolutionary outcome will be affected by genetic drift.
 # Although, Fox et al. 2001 states that their results apply to population growth with
 # no density dependence, computation will become very slow if the number of
 # individuals is allowed to become very large. To avoid this we assume a fixed population
@@ -65,7 +65,7 @@ for(i in seq(2,Number.genotypes)){
 
 # The development time function
 #-----------------------------
-# The time to reach maturity (be reproductive) is determined by the length
+# The time to reach maturity (i.e. be reproductive) is determined by the length
 # at maturity, for example, if the length at maturity is quite large, then
 # it will take more days to reach maturity
 Development = function(L){
@@ -127,7 +127,7 @@ Popn = data.frame(cbind(genotype=genotype,age=age,L=L,develop.time))
 Fecundity = function(a,L){
   # The parameters weren't given in Fox et al., so I did a bunch of algebra and
   # graphing to figure out what the parameters could be to reproduce Fig. 8.2
-  # in Fox et al. I assumed that small implied L = 0.6mm and large implied L=1.6mm.
+  # in Fox et al. I assumed that small implied L = 0.6mm and large implied L = 1.6mm.
   m1 = .45
   # m2: x-intercept
   m2 = 3
@@ -150,7 +150,7 @@ avec = seq(0,20,.1)
 plot(avec,Fecundity(avec,0.6), typ="l", lwd=3,ylim = c(0,120), xlab = "Age (days since eclosion)", ylab = "Female eggs, m(x)", main = "Fox et al. 2001: Evolutionary ecology, Fig. 8.2")
 lines(avec, Fecundity(avec,1.6), lwd=3, lty=2)
 
-# For the population dynamics, we assume that each time step on individual dies
+# For the population dynamics, we assume that at each time step one individual dies
 # and one individual reproduces making an offspring with the same genotype but
 # with age 0. This is called the DB model (death then birth) and I have assumed
 # the population has a fixed size (if at least one individual can reproduce).
@@ -264,7 +264,7 @@ legend("topleft", legend = genotypes$L, col=Colours, lty = rep(1,Number.genotype
 # SOME NOTES
 #-----------
 # 1. The outcome of the evolutionary dynamics are quite sensitive to the choice of
-#   dt which was made arbitrarily.
+#   dt, which was made arbitrarily.
 # 2. The initial condition starts with only larvae, and so for the first few iterations
 #    of the loop there is no reproduction. During this time, the population decreases in size
 #    and it is only once at least one individual is an adult, that reproduction begins and
@@ -276,5 +276,5 @@ legend("topleft", legend = genotypes$L, col=Colours, lty = rep(1,Number.genotype
 #    time for.
 # 4. You can make a graph for "Female eggs, m(x)" for a given length maturity, L0 by
 #    using the following commands:
-# > avec = seq(0,20,.1)
-# > plot(avec,Fecundity(avec,L0), typ="l", lwd=3,ylim = c(0,120), xlab = "Age (days since eclosion)", ylab = "Female eggs, m(x)")
+#  avec = seq(0,20,.1)
+#  plot(avec,Fecundity(avec,L0), typ="l", lwd=3,ylim = c(0,120), xlab = "Age (days since eclosion)", ylab = "Female eggs, m(x)")
