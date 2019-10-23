@@ -38,14 +38,14 @@ This line of code states that there are three genotypes present in the populatio
 
 Your task for this lab is to:
 1. Explore the evolutionary dynamics more thoroughly, and
-1. To understand the assumptions that this script makes as it implements the population dynamics.
+1. To understand the assumptions that this script makes as it implements the evolutionary dynamics.
 
-# Exploring the population dynamics more thoroughly
+## Exploring the population dynamics more thoroughly
 So far, we know that if there are 3 genotypes corresponding to maturity at 1mm, 2mm, and 3mm thorax lengths, then maturity at 1mm thorax length will be selected. We do not know anything about other values of thorax length, and we do not know to what extent the presence of other genotypes shapes the outcome of evolution (i.e., if there were just two genotypes _L_=1mm and _L_=2mm (but not _L_=3mm), will _L_=1mm still be the strategy that goes to fixation?)
 
 You are to devise a set of numerical experiments to better understand the evolutionary dynamics of body size at maturation by changing `genotypes.list`, running simulations, and recording the outcome.
 
-## You are to hand-in
+### You are to hand-in
 - A table that lists: the genotypes you considered; and the outcome of each simulation, for a series of numerical experiments.
 - A description of the logic you used in deciding what values of `genotype.list` to use for your numerical experiments.
 - Answers to the following questions:
@@ -65,7 +65,7 @@ genotypes.list = c(0.5,1,1.5)
 ```
 
 
-# Understanding the assumptions that this script makes regarding the population dynamics
+## Understanding the assumptions that this script makes regarding the population dynamics
 
 Pseudocode is a step-by-step description of how an algorithm works. For example, pseudocode for numerically solving a discrete-time population growth model might look like this:
 
@@ -80,7 +80,7 @@ Pseudocode is a step-by-step description of how an algorithm works. For example,
 ```
 A valuable aspect of reporting code in this way, is to skip over non-essential details such as syntax and exact numerical values, and to focus instead on the concepts of what the code is doing.
 
-## To hand-in
+### To hand-in
 You are to write pseudocode that describes how this evolutionary simulation works.
 
 Your pseudocode should:
