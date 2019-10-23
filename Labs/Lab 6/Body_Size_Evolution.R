@@ -13,7 +13,7 @@ require(viridis)
 
 # The number of time steps to run the simulation
 # You can change 100 to a different number if you would like
-total.time = 100
+total.time = 1000
 
 # Larval mortality rate
 # ---------------------
@@ -255,7 +255,7 @@ Number[t+1,] = c(Time, genotypes.count)
 # Fix the color palette, so that we can make a legend that will be
 # correct for a variable number of genotypes
 Colours = viridis(Number.genotypes)
-plot(Number[,1], Number[,2], typ="l", col = Colours[1], ylim = c(min(Number[,2:(Number.genotypes+1)]),max(Number[,2:(Number.genotypes+1)])), xlab = "time", ylab = "no. of ind. with genotype i", main = "Evolution of body size at maturity")
+plot(Number[,1], Number[,2], typ="l", col = Colours[1], ylim = c(min(Number[,2:(Number.genotypes+1)]),max(Number[,2:(Number.genotypes+1)])), xlab = "time, days", ylab = "no. of ind. with genotype i", main = "Evolution of body size at maturity")
 for(i in seq(2,Number.genotypes)){
 lines(Number[,1], Number[,i+1], typ="l", col = Colours[i])
 }
