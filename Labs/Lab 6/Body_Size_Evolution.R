@@ -255,7 +255,7 @@ Number[t+1,] = c(Time, genotypes.count)
 # Fix the color palette, so that we can make a legend that will be
 # correct for a variable number of genotypes
 Colours = viridis(Number.genotypes)
-plot(Number[,1], Number[,2], typ="l", col = Colours[1], ylim = c(min(Number[,2:(Number.genotypes+1)]),max(Number[,2:(Number.genotypes+1)])), xlab = "time", ylab = "population size", main = "Evolution of body size at maturity")
+plot(Number[,1], Number[,2], typ="l", col = Colours[1], ylim = c(min(Number[,2:(Number.genotypes+1)]),max(Number[,2:(Number.genotypes+1)])), xlab = "time", ylab = "no. of ind. with genotype i", main = "Evolution of body size at maturity")
 for(i in seq(2,Number.genotypes)){
 lines(Number[,1], Number[,i+1], typ="l", col = Colours[i])
 }
@@ -270,3 +270,11 @@ legend("topleft", legend = genotypes$L, col=Colours, lty = rep(1,Number.genotype
 #    and it is only once at least one individual is an adult, that reproduction begins and
 #    the population size stabilizes. Therefore, whatever the value of "Popn.Size" the population
 #    will actually stabilize at a value a bit lower than this.
+# 3. The graph shows the length at maturity. If you would like to know the development
+#    time, you need to type > Development(L0) into the console, where L0 is a number
+#    corresponding to the length at maturity you want to know the corresponding development
+#    time for.
+# 4. You can make a graph for "Female eggs, m(x)" for a given length maturity, L0 by
+#    using the following commands:
+# > avec = seq(0,20,.1)
+# > plot(avec,Fecundity(avec,L0), typ="l", lwd=3,ylim = c(0,120), xlab = "Age (days since eclosion)", ylab = "Female eggs, m(x)")
