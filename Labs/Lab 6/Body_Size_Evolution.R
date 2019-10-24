@@ -138,6 +138,8 @@ Fecundity = function(a,L){
   m0 = m4*L^m5
   # m is equation 8.4 on p107
   m = m0*(1-exp(-m1*(a-m2)))*exp(-m3*a)
+  # fecundity should not be less than zero
+  m[m<0] = 0
   return(m)
 }
 
@@ -230,9 +232,8 @@ row.names(Popn) = seq(1,length(Popn[,1]))
 # by under a Gillespie algorithm implementation, however, this seemed
 # to give the evolution of very small L, so I commented it out.
 # dt = -log(runif(1))/cum.dscore[length(Popn[,1])]
-# Let's assume that each iteration of the loop corresponds to 1/10 of a day
-# such that 10 individuals (out of the ~1000, i.e. 1%) die each day.
-dt=1/10
+# Let's assume that each iteration of the loop corresponds to one day
+dt=1
 
 # The new value of Time (upon the completion of this iteration of the loop)
 # is the old value of Time (from the previous iteration of the loop) + dt.
