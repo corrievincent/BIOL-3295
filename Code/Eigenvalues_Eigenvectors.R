@@ -41,6 +41,7 @@ vec3 = A%*%vec2
 # eigenvalue?
 1.05*norm.vec1
 
+# Let's simulate the long term population dyanmics
 tvec = seq(1,30,1)
 n = matrix(0,length(tvec),3)
 n[,1]=tvec
@@ -49,10 +50,16 @@ for(t in seq(1,length(tvec)-1,1)){
   n[t+1,2:3] = A%*%n[t,2:3]
 }
 
-
+# Plot the long-term population dynamics
 plot(n[,1], n[,2], typ = "l", col = "red", ylim = c(0,200), ylab = "stage abundance", xlab = "time", main = "Initial stage abundance is an eigenvector")
 lines(n[,1], n[,3])
 
+# How does the proportion of the population in the first (juvenile stage)
+# change over time
+plot(tvec,n[,2]/(n[,2]+n[,3]), typ="l", ylab = "proportion juveniles", xlab = "time", ylim =c(0,1), main = "Initial stage abundance is an eigenvector")
+
+# Next, determine the longterm population dynamics where the initial
+# abundance does not begin on an eigenvector.
 tvec = seq(1,50,1)
 n = matrix(0,length(tvec),3)
 n[,1]=tvec
@@ -63,3 +70,5 @@ for(t in seq(1,length(tvec)-1,1)){
 
 plot(n[,1], n[,2], typ = "l", col = "red", ylim = c(0,1000), ylab = "stage abundance", xlab = "time", main = "Initial stage abundance not an eigenvector")
 lines(n[,1], n[,3])
+
+plot(tvec,n[,2]/(n[,2]+n[,3]), typ="l", ylab = "proportion juveniles", xlab = "time", ylim =c(0,1), main = "Initial stage abundance not an eigenvector")
