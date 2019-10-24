@@ -34,8 +34,32 @@ vec1 = ev$vectors[,1]
 norm.vec1 = -100*vec1
 
 # What happens if our initial population size is a right eigenvector?
-A%*%norm.vec1
+vec2 = A%*%norm.vec1
+vec3 = A%*%vec2
 
 # How does this compare to if the right eigenvector is multiplied by the dominant
 # eigenvalue?
 1.05*norm.vec1
+
+tvec = seq(1,30,1)
+n = matrix(0,length(tvec),3)
+n[,1]=tvec
+n[1,2:3] = c(89,47)
+for(t in seq(1,length(tvec)-1,1)){
+  n[t+1,2:3] = A%*%n[t,2:3]
+}
+
+
+plot(n[,1], n[,2], typ = "l", col = "red", ylim = c(0,200), ylab = "stage abundance", xlab = "time", main = "Initial stage abundance is an eigenvector")
+lines(n[,1], n[,3])
+
+tvec = seq(1,50,1)
+n = matrix(0,length(tvec),3)
+n[,1]=tvec
+n[1,2:3] = c(0,100)
+for(t in seq(1,length(tvec)-1,1)){
+  n[t+1,2:3] = A%*%n[t,2:3]
+}
+
+plot(n[,1], n[,2], typ = "l", col = "red", ylim = c(0,1000), ylab = "stage abundance", xlab = "time", main = "Initial stage abundance not an eigenvector")
+lines(n[,1], n[,3])
