@@ -20,4 +20,7 @@ These characteristics are different from all the models we have studied in class
 3. Click the purple `go` button: the simulation will begin; click `go` and the simulation will pause; to reset press `setup`.
 4. Along the top grey bar notice that you have a slider bar that affects the speed of the vizualization. You also have the option to check or uncheck `view updates`: unchecking `view updates` will allow the simulation complete more quickly.
 5. You can change the parameters values by typing new numbers into the green boxes and clicking `setup` and `go` (note that you should stop the simulation before you change the parameter values). The meanings of the parameter values are:
- - 
+  - `r` the reproductive rate,
+  - `d` the natural mortality rate,
+  - `beta` the transmission rate,
+  - ``
