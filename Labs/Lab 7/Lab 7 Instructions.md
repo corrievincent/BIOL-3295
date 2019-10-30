@@ -35,4 +35,8 @@ These characteristics are different from all the models we have studied in class
 ## Objectives
 The goal of this is to:
 - Investigate the threshold condititions for a disease outbreak, and
-- Investigate the effect of local infection 
+- Investigate the effect of local infection spread on disease dynamics.
+
+For these infection dynamics (as described under the `Info` tab), a disease outbreak will occur if $R_0 > 1$, where
+
+
