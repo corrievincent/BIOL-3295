@@ -39,4 +39,6 @@ The goal of this is to:
 
 For these infection dynamics (as described under the `Info` tab), a disease outbreak will occur if R<sub>0</sub> > 1, where
 
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+
 
