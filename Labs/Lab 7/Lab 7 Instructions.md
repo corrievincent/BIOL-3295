@@ -41,5 +41,12 @@ For these infection dynamics (as described under the `Info` tab), when infection
 
 
 ## To hand-in
-1. Choose parameter values so that infections are only spread globally, and so that R<sub>0</sub> > 1. Sketch the dynamics of the _frequency of patch types_. Describe the trajectory of the proportion of patches that are occupied by infected sheep.
-2. Choose parameter values so that infections are only spread globally, and so that R<sub>0</sub> < 1. Sketch the dynamics of the _frequency of patch types_. Describe the trajectory of the proportion of patches that are occupied by infected sheep.
+1. Consider the R<sub>0</sub> equation. Do larger values values of `beta` suggest larger or smaller values of R<sub>0</sub>? Is an outbreak more likely when `beta` is large or small? What is the meaning of `beta`?
+2. Choose parameter values so that infections are only spread globally, and so that R<sub>0</sub> >> 1. State the parameter values that you choose (the values from the green boxes). Sketch the dynamics of the _frequency of patch types_. Describe the trajectory of the proportion of patches that are occupied by infected sheep.
+3. Choose parameter values so that infections are only spread globally, and so that R<sub>0</sub> << 1. State the parameter values that you choose (the values from the green boxes). Sketch the dynamics of the _frequency of patch types_. Describe the trajectory of the proportion of patches that are occupied by infected sheep.
+4. Set your parameters such that disease will eventually be eliminated from the sheep pouplation if infections are spread globally. Change the value of `P` so that now infections are only spread locally. State your parameter values. Sketch the dynamics of the _frequency of patch types_. Does local infection spread increase or decrease the potential for an outbreak of disease in the sheep population?
+5. Run a simulation with only local infection spread where the disease spreads. Describe a visual difference that you observe regarding the distribution of infected sheep, relative to when infection spread is global.
+6. What is `alpha`? Consider the `alpha` in the R<sub>0</sub> equation. State a hypothesis regarding how large values of `alpha` will affect the disease dynamics. Run a simulation to test your hypothesis. Remember, much like a _real_ experiment, for the computer experiment, you can most easily draw conclusions, if you have a control and you manipulate only your experiment variable!
+7. Can the sheep population go extinct? Describe the state of the population prior to extinction.
+8. Let's edit the code! Find the line of code `set-default-shape turtles "sheep"`.
+
