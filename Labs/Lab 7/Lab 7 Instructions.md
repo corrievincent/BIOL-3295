@@ -11,8 +11,13 @@ This lab uses `Netlogo` to simulate disease dynamics in a sheep population. The 
 
 These characteristics are different from all the models we have studied in class so far (aside from Lab 6, last week, where the evolutionary dynamics were stochastic and individuals were explicitly represented). The logistic growth model considers competition for a limiting resource and assumes that all individuals, within the specified area, experience the same strength of intraspecific competition. The logistic equation is not spatially explicit because the equation, _dN/dt = rN(1-N/K)_ considers only the population size at time, _t_, and does not consider where indiivduals are located. In contrast, for this lab, where individuals are located will be important.
 
-`Local_SI.nlogo` considers infection dynamics where infections can be spread either locally (only to neighbours), with probability, _1-P_ or globally (can be spread to anyone), with probability, _P_. When infections are spread globally, the model is effectively not spatially explicit because, although individuals are assigned to locations in space, the location of an individual has no effect on the population dynamics. Therefore, by setting _P=0_, we can consider only local infection spread, and we can compare the results of these simulations with the results of simulations that are not spatially explicity, by setting _P=1_.
+`Local_SI.nlogo` considers infection dynamics where infections can be spread either locally (only to neighbours), with probability, _1-P_, or globally (can be spread to anyone), with probability, _P_. When infections are spread globally, the model is effectively not spatially explicit because, although individuals are assigned to locations in space, the location of an individual has no effect on the population dynamics. Therefore, by setting `P=0`, we can consider only local infection spread, and we can compare the results of these simulations with the results of simulations that are not spatially explicity, by setting `P=1`.
 
 ## Getting started
 
-Open the file `Local_SI.nlogo` in the `NetLogo` program.
+1. Open the file `Local_SI.nlogo` in the `NetLogo` program.
+2. Click the purple `setup` box. This will initialize the simulation with the parameter values as given in the green boxes.
+3. Click the purple `go` button: the simulation will begin; click `go` and the simulation will pause; to reset press `setup`.
+4. Along the top grey bar notice that you have a slider bar that affects the speed of the vizualization. You also have the option to check or uncheck `view updates`: unchecking `view updates` will allow the simulation complete more quickly.
+5. You can change the parameters values by typing new numbers into the green boxes and clicking `setup` and `go` (note that you should stop the simulation before you change the parameter values). The meanings of the parameter values are:
+ - 
