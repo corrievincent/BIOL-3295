@@ -31,3 +31,8 @@ These characteristics are different from all the models we have studied in class
   - Large right panel: unoccupied patches are shown in green, infected sheep are red, and susceptible sheep are white.
 7. Note the there tabs in the center `Interface`, `Info`, and `Code`. Click `Info` and read about the assumptions of the simulation.
 8. Click the `Code` tab to see the code.
+
+## Objectives
+The goal of this is to:
+- Investigate the threshold condititions for a disease outbreak, and
+- Investigate the effect of local infection 
