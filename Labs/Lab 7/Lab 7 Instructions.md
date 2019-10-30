@@ -48,8 +48,6 @@ For these infection dynamics (as described under the `Info` tab), when infection
 5. Run a simulation with only local infection spread where the disease spreads. Describe a visual difference that you observe regarding the distribution of infected sheep, relative to when infection spread is global.
 6. What is `alpha`? Consider the `alpha` in the R<sub>0</sub> equation. State a hypothesis regarding how large values of `alpha` will affect the disease dynamics. Run a simulation to test your hypothesis. Remember, much like a _real_ experiment, for the computer experiment, you can most easily draw conclusions, if you have a control and you manipulate only your experiment variable!
 7. Can the sheep population go extinct? Describe the state of the population prior to extinction.
-8. Let's edit the code! Find the line of code `set-default-shape turtles "sheep"`. Other shapes that are available are :
-```
-"default" "airplane" "arrow" "box" "bug" "butterfly" "car" "circle" "circle 2" "cow" "cylinder" "dot" "face happy" "face neutral" "face sad" "fish" "flag" "flower" "house" "leaf" "line" "line half" "pentagon" "person" "plant" "square" "square 2" "star" "target" "tree" "triangle" "triangle 2" "truck" "turtle" "wheel" "x"
-```
+8. Let's edit the code! Find the line of code `set-default-shape turtles "sheep"`. Other shapes that are available are : `"default" "airplane" "arrow" "box" "bug" "butterfly" "car" "circle" "circle 2" "cow" "cylinder" "dot" "face happy" "face neutral" "face sad" "fish" "flag" "flower" "house" "leaf" "line" "line half" "pentagon" "person" "plant" "square" "square 2" "star" "target" "tree" "triangle" "triangle 2" "truck" "turtle" "wheel" "x"`
+
 
