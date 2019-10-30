@@ -39,7 +39,7 @@ The goal of this lab is to investigate:
 - the threshold condititions for disease outbreaks, and
 - the effect of local infection spread on disease dynamics.
 
-For these infection dynamics (as described under the `Info` tab), when infections are only spread globally, a disease outbreak might occur if R<sub>0</sub> >> 1, where R<sub>0</sub> = (&beta;S<sup>a</sup>)/(&alpha; + d) and where &alpha; is `alpha` and &beta; is `beta`. The R<sub>0</sub> equation assumes global reproduction, which is not actually the case for this simulation, and we can't really calculate S<sup>*</sup>, the number of susceptible hosts at equilibrium, but this R<sub>0</sub> will be a useful heuristic to understand whether increasing specific parameters will increase the susceptibility of the population to endemic disease.
+For these infection dynamics (as described under the `Info` tab), when infections are only spread globally, a disease outbreak might occur if R<sub>0</sub> >> 1, where R<sub>0</sub> = (&beta;S<sup>&*;</sup>)/(&alpha; + d) and where &alpha; is `alpha` and &beta; is `beta`. The R<sub>0</sub> equation assumes global reproduction, which is not actually the case for this simulation, and we can't really calculate S<sup>*</sup>, the number of susceptible hosts at equilibrium, but this R<sub>0</sub> will be a useful heuristic to understand whether increasing specific parameters will increase the susceptibility of the population to endemic disease.
 
 
 ## To hand-in
