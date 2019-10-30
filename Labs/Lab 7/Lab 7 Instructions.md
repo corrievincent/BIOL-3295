@@ -37,8 +37,11 @@ The goal of this is to:
 - Investigate the threshold condititions for a disease outbreak, and
 - Investigate the effect of local infection spread on disease dynamics.
 
-For these infection dynamics (as described under the `Info` tab), a disease outbreak will occur if R<sub>0</sub> > 1, where
+For these infection dynamics (as described under the `Info` tab), when infections are only spread globally, a disease outbreak will occur if R<sub>0</sub> > 1, where
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" title="\Large R_0=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
 
 
+## To hand-in
+1. Choose parameter values so that infections are only spread globally, and so that R<sub>0</sub> > 1. Sketch the dynamics of the _frequency of patch types_. Describe the trajectory of the proportion of patches that are occupied by infected sheep.
+2. Choose parameter values so that infections are only spread globally, and so that R<sub>0</sub> < 1. Sketch the dynamics of the _frequency of patch types_. Describe the trajectory of the proportion of patches that are occupied by infected sheep.
