@@ -5,7 +5,7 @@ globals [theta turtle-select a0 time-events i cum-val turtle-list pSS pSI pS0 pI
 ; time-events: keeps track of the time of events
 ; i: just an internal counter, but the section of code I was working in was
 ; giving an error if the scope was not set to global
-; cum-val
+; cum-val: is used to randomly select a turtle that experiences the randomly selected event
 ; turtle-list: an agent-set of all turtles at a given time
 ; pij: the frequency of site pairs where one sight is occupied by i and one by j
 ; total-patches: the total number of patches in the landscape
@@ -63,7 +63,7 @@ end
 to go
   ; conditions to stop the simulation
   if  count turtles  = 0 [ stop ]
-  if time-events > 10 [stop]
+  if time-events > tend [stop]
   ; calculate the rates for all events that can occur for all individuals in the population
   calc-rates
   ; calculate the frequency of pairs as the output variable
@@ -370,29 +370,45 @@ P
 0
 Number
 
+INPUTBOX
+240
+10
+295
+70
+tend
+10.0
+1
+0
+Number
+
 @#$#@#$#@
-# ABM with local reproduction and infection spread
+# IBM with local reproduction and infection spread
 
-This model is a spatially explicit ABM where infections can be spread either locally, with probability 1-P, or globally, with probability P. When infections occur locally, infection can only be spread from an infected neighbor to a susceptible neighbour, but when infections occur globally, any infected individual can infect any susceptible individual.  In addition, the model is spatially explict because reproduction can only occur into a neighbouring site that is unoccuppied.
+This is an individual-based model for disease dynamics where infections may spread locally, with probability 1-P, or globally, with probability P. When infections occur locally, infection can only be spread from an infected individual to a susceptible neighbour, but when infections occur globally, an infected individual can infect any susceptible individual regardless of their location.
 
-The default parameter are set so the infection is avirulent (no disease-induced mortality), but is sterilizing (since infecteds can not reproduce). The transmission rate, beta, is set very high, so we can observed the local infection spread. Once all individuals have become infected, we see all the sheep die off. Note also that time increments much more quickly once all sheep have become infected.
+The simulation assumes that only susceptible hosts can reproduce, and that reproduction is local, such that there must be a neighbouring unoccupied site for the offspring to occupy. Both susceptible and infected individuals experience background mortality at rate, d.
 
-## Instructions
-1. Choose parameter values.
-2. Press the SETUP button.
-3. Press the GO button to begin the simulation.
-4. Press the GO button again to stop (although the simulation also has breaks coded for extinction and after a fixed amount of time).
-5. Refer to the instructions in "ABMs and Math Workshop.pdf" for comparing to the model output to the pair approximation equations.
+The default parameter are set so the infection is avirulent (no disease-induced mortality, alpha = 0), but the disease is sterilizing (since infecteds can not reproduce).  The disease dynamics follow an SI formulation, which means that infected individuals do not recover. 
 
 Parameters:
+tend: the length of the simulation
 r: reproduction rate
 d: natural mortality rate
 beta: transmission rate
 alpha: diseaser-induced mortality rate
 P: probability of global infection spread
 
+Many more details of the model formulation can be found in the reference for a closely related model.
+
+## Instructions
+1. Choose parameter values.
+2. Press the SETUP button.
+3. Press the GO button to begin the simulation.
+4. Press the GO button again to stop (although the simulation also has breaks coded for extinction and after a fixed amount of time).
+
+
 ## References
-Hurford, A., J. Watmough, J. Marino, A. Mcleod, C. Prokopenko. Agent-based models and the mathematical equations that describe them. Unpublished.
+Hurford, A., J. Watmough, J. Marino, A. Mcleod, C. Prokopenko. Agent-based models and the mathematical equations that describe them. https://github.com/jameswatmough/CSEE2019-AARMS-ABM-workshop/blob/master/Documentation/ABM-Workshop-CSEE2019.pdf
 @#$#@#$#@
 default
 true
