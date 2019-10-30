@@ -29,3 +29,5 @@ These characteristics are different from all the models we have studied in class
   - Top left graph: the proportion of patches that are unoccupied (green line), or occupied by infected (red line), or uninfected (black line) sheep.
   - Bottom left right: due to technical considerations, one iteration of the simulation represents a variable amount of time. This graph shows the progression of time as a function of the simulation iteration.
   - Large right panel: unoccupied patches are shown in green, infected sheep are red, and susceptible sheep are white.
+7. Note the there tabs in the center `Interface`, `Info`, and `Code`. Click `Info` and read about the assumptions of the simulation.
+8. Click the `Code` tab to see the code.
