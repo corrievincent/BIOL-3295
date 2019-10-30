@@ -23,4 +23,9 @@ These characteristics are different from all the models we have studied in class
   - `r` the reproductive rate,
   - `d` the natural mortality rate,
   - `beta` the transmission rate,
-  - ``
+  - `alpha` the disease-induced mortality rate,
+  - `P` the proportion of infections that are spread globally.
+6. The graphs that you see are plotting:
+  - Top left graph: the proportion of patches that are unoccupied (green line), or occupied by infected (red line), or uninfected (black line) sheep.
+  - Bottom left right: due to technical considerations, one iteration of the simulation represents a variable amount of time. This graph shows the progression of time as a function of the simulation iteration.
+  - Large right panel: unoccupied patches are shown in green, infected sheep are red, and susceptible sheep are white.
