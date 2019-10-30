@@ -39,7 +39,7 @@ The goal of this is to:
 
 For these infection dynamics (as described under the `Info` tab), when infections are only spread globally, a disease outbreak might occur if R<sub>0</sub> > 1, where
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;R-0=\frac{\beta S^*}{\alpha + d}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;R_0=\frac{\beta S^*}{\alpha + d}" title="\Large x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}" />
 
 where &alpha; is `alpha` and &beta; is `beta`. The above equation assumes global reproduction, which is not actually the case for this simulation, and we can't really calculate S<sup>*</sup>, the number of susceptible hosts at equilibrium, but this R<sub>0</sub> will be a useful heuristic to understand whether increasing specific parameters will increase the susceptibility of the population to endemic disease.
 
