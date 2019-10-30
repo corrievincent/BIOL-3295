@@ -19,9 +19,9 @@ These characteristics are different from all the models we have studied in class
 
 1. Open the file `Local_SI.nlogo` in the `NetLogo` program.
 2. Click the purple `setup` box. This will initialize the simulation with the parameter values as given in the green boxes.
-3. Click the purple `go` button: the simulation will begin; click `go` and the simulation will pause; to reset press `setup`.
+3. Click the purple `go` button: the simulation will begin; click `go` again, and the simulation will pause; to reset press `setup`. If you do not pause the simulation it will run until time is 20.
 4. Along the top grey bar notice that you have a slider bar that affects the speed of the vizualization. You also have the option to check or uncheck `view updates`: unchecking `view updates` will allow the simulation complete more quickly.
-5. You can change the parameters values by typing new numbers into the green boxes and clicking `setup` and `go` (note that you should stop the simulation before you change the parameter values). The meanings of the parameter values are:
+5. You can change the parameter values by typing new numbers into the green boxes and clicking `setup` and `go` (note that you should pause or the simulation should be stopped before you change the parameter values). The meanings of the parameter values are:
   - `r` the reproductive rate,
   - `d` the natural mortality rate,
   - `beta` the transmission rate,
@@ -29,17 +29,17 @@ These characteristics are different from all the models we have studied in class
   - `P` the proportion of infections that are spread globally.
 6. The graphs that you see are plotting:
   - Top left graph: the proportion of patches that are unoccupied (green line), or occupied by infected (red line), or uninfected (black line) sheep.
-  - Bottom left right: due to technical considerations, one iteration of the simulation represents a variable amount of time. This graph shows the progression of time as a function of the simulation iteration.
+  - Bottom left right: due to technical considerations, one iteration of the simulation represents a variable amount of time. This graph shows the progression of time as a function of the simulation iteration (i.e., one iteration of a for-loop).
   - Large right panel: unoccupied patches are shown in green, infected sheep are red, and susceptible sheep are white.
-7. Note the there tabs in the center `Interface`, `Info`, and `Code`. Click `Info` and read about the assumptions of the simulation.
+7. Note the there tabs in the center: `Interface`, `Info`, and `Code`. Click `Info` and read about the assumptions of the simulation.
 8. Click the `Code` tab to see the code.
 
 ## Objectives
-The goal of this is to:
-- Investigate the threshold condititions for a disease outbreak, and
-- Investigate the effect of local infection spread on disease dynamics.
+The goal of this lab is to investigate:
+- the threshold condititions for disease outbreaks, and
+- the effect of local infection spread on disease dynamics.
 
-For these infection dynamics (as described under the `Info` tab), when infections are only spread globally, a disease outbreak might occur if R<sub>0</sub> > 1, where R<sub>0</sub> = (&beta;S<sup>*</sup>)/(&alpha; + d) and where &alpha; is `alpha` and &beta; is `beta`. The R<sub>0</sub> equation assumes global reproduction, which is not actually the case for this simulation, and we can't really calculate S<sup>*</sup>, the number of susceptible hosts at equilibrium, but this R<sub>0</sub> will be a useful heuristic to understand whether increasing specific parameters will increase the susceptibility of the population to endemic disease.
+For these infection dynamics (as described under the `Info` tab), when infections are only spread globally, a disease outbreak might occur if R<sub>0</sub> >> 1, where R<sub>0</sub> = (&beta;S<sup>a</sup>)/(&alpha; + d) and where &alpha; is `alpha` and &beta; is `beta`. The R<sub>0</sub> equation assumes global reproduction, which is not actually the case for this simulation, and we can't really calculate S<sup>*</sup>, the number of susceptible hosts at equilibrium, but this R<sub>0</sub> will be a useful heuristic to understand whether increasing specific parameters will increase the susceptibility of the population to endemic disease.
 
 
 ## To hand-in
