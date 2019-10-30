@@ -39,7 +39,7 @@ The goal of this is to:
 
 For these infection dynamics (as described under the `Info` tab), when infections are only spread globally, a disease outbreak might occur if R<sub>0</sub> > 1, where
 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;R_0=\frac{&beta}{2a}" title="" />
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;R_0=\frac{&beta;S*}{2a}" title="" />
 
 The above equation assumes global reproduction, which is not actually the case for this simulation, and we can't really calculate _S*_, the number of susceptible hosts at equilibrium, but this R<sub>0</sub> will be a useful heuristic, nonetheless. 
 
