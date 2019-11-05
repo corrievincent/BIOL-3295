@@ -1,9 +1,8 @@
 # Announcements
-- Typo corrected on the midterm. In question 1, assume lambda > 1 (corrected from lambda > 0). In addition, in part 1c, the recommendation of testing for lambda = 2 (corrected from lambda = 1).
-- Another revision on question 1 of the midterm: do not consider N_t < 0.
-- The midterm is posted! It is due Nov 1.
-- Thursday and Friday this week, I will review what we have done in class so far, and discuss problems that could appear on the final exam.
+- Assignment 3 is posted. It is due Friday Nov 15.
+- There is no lab on Wednesday this week.
 - Count the ducks and submit your pull request.
 
 ## R Help
 - The pirates guide to R pretty good: https://bookdown.org/ndphillips/YaRrr/
+- You can learn R by completing the Software Carepentry http://swcarpentry.github.io/r-novice-inflammation/
